@@ -1,0 +1,92 @@
+﻿body {
+    padding: 10px;
+    background-color: whiteSmoke;
+    color: #555;
+}
+
+p {
+    margin: 0;
+}
+
+#header-desktop .header-options,
+#header-desktop .header-search,
+#header-tablet .header-options,
+#header-tablet .header-search {
+    text-align: right;
+}
+
+#header-phone {
+    text-align: center;
+}
+
+#header-tablet,
+#header-phone {
+    margin-top: 10px;
+}
+
+#header-phone .header-options {
+    margin: 10px 0;
+}
+
+#loading {
+    text-align: center;
+    font-weight: bold;
+}
+
+#posts {
+    margin-top: 10px;
+    border: 1px solid #E8E8E8;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#footer {
+    text-align: center;
+    font-size: 85%;
+}
+
+#btn-fb-group-1,
+#btn-fb-group-2,
+#btn-fb-group-3,
+#btn-fb-group-4,
+.btn-fb-group {
+    font-size: 85%;
+    font-weight: bold;
+}
+
+.section-header {
+    font-weight: bold;
+}
+
+.post {
+    position: relative;
+    clear: left;
+    padding: 10px;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.post-img {
+    float: left;
+    margin-top: 2px;
+}
+
+.post-time {
+    float: right;
+    color: #AAA;
+}
+
+.post-details {
+    padding-left: 60px;
+}
+
+.post-from a {
+    color: #555;
+    font-weight: bold;
+}
+
+.post-name {
+    color: #0084B4;
+    font-weight: bold;
+}
