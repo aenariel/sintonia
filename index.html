@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintonia sobre pretexto</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/datepicker.css" />
+    <link rel="stylesheet" href="css/iufblmud.css" />
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+</head>
+<body>
+    <div id="fb-root"></div>
+
+    <div class="container">
+        <div id="header-desktop" class="row visible-desktop">
+            <div class="span7 header-group dropdown">
+                <a id="lbl-fb-group" class="btn dropdown-toggle btn-fb-group" data-toggle="dropdown" role="button" href="#">
+                    Sintonia sobre pretexto
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="lbl-fb-group">
+                    <li><a id="opt-fb-group-1" tab-index="-1" href="#">Sintonia sobre pretexto</a></li>
+                </ul>
+            </div>
+            <div class="btn-group span2 header-options">
+                <a class="btn btn-date-picker" href="#" data-date-format="d-m-yyyy" data-date="1-1-1970"><i class="icon-calendar"></i>1-1-1970</a>
+                <a class="btn" href="#options" role="button" data-toggle="modal"><i class="icon-wrench"></i></a>
+            </div>
+            <div class="span3 header-search">
+                <input id="search-desktop" class="input-medium" type="text" placeholder="Search">
+            </div>
+        </div>
+
+        <div id="header-tablet" class="row visible-tablet">
+            <div class="span6 header-group">
+                <a class="btn btn-fb-group" href="#fb-group" role="button" data-toggle="modal">Sintonia sobre pretexto&nbsp;&nbsp;<b class="caret"></b></a>
+            </div>
+            <div class="btn-group span3 header-options">
+                <a class="btn btn-date-picker" href="#" data-date-format="d-m-yyyy" data-date="1-1-1970"><i class="icon-calendar"></i> 1-1-1970</a>
+                <a class="btn" href="#options" role="button" data-toggle="modal"><i class="icon-wrench"></i></a>
+            </div>
+            <div class="span3 header-search">
+                <input id="search-tablet" class="input-medium" type="text" placeholder="Search">
+            </div>
+        </div>
+
+        <div id="header-phone" class="row visible-phone">
+            <div class="span6 header-group">
+                <a class="btn btn-fb-group" href="#fb-group" role="button" data-toggle="modal">Sintonia sobre pretexto&nbsp;&nbsp;<span class="caret"></span></a>
+            </div>
+            <div class="btn-group span3 header-options">
+                <a class="btn btn-date-picker" href="#" data-date-format="d-m-yyyy" data-date="1-1-1970"><i class="icon-calendar"></i> 1-1-1970</a>
+                <a class="btn" href="#options" role="button" data-toggle="modal"><i class="icon-wrench"></i></a>
+            </div>
+            <div class="span3 header-search">
+                <input id="search-phone" class="input-big" type="text" placeholder="Search">
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="loading" class="span12 hide">
+                <p>Loading... please wait</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="posts" class="span12"></div>
+        </div>
+
+        <div class="row">
+            <div id="footer" class="span12">
+                <p>Original coding by <a href="http://www.facebook.com/wilson.oliveira">Wilson Oliveira</a>. Adapted by <a href="http://www.facebook.com/aenariel">Sílvio Matos</a> for <a href="http://www.facebook.com/groups/sintoniasobrepretexto/">Sintonia sobre pretexto</a>.</p>
+                <p>Source code of the original app can be found <a href="http://github.com/woli/iufblmud/tree/gh-pages">here</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="fb-group" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="fb-group-label" aria-hidden="true">
+        <div class="modal-header">
+            <h3 id="fb-group-label">Group</h3>
+        </div>
+        <div class="modal-body">
+            <button id="btn-fb-group-1" class="btn btn-block btn-primary" type="button">Sintonia sobre pretexto</button>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+    </div>
+
+    <div id="options" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="options-label" aria-hidden="true">
+        <div class="modal-header">
+            <h3 id="options-label">Options</h3>
+        </div>
+        <div class="modal-body">
+            <div id="sort-by-group" class="control-group">
+                <div class="controls">
+                    <label class="section-header">Sort by</label>
+                    <label class="radio inline">
+                      <input type="radio" name="sortByRadios" value="time" checked>
+                      Time
+                    </label>
+                    <label class="radio inline">
+                      <input type="radio" name="sortByRadios" value="author">
+                      Author
+                    </label>
+                    <label class="radio inline">
+                      <input type="radio" name="sortByRadios" value="post">
+                      Post
+                    </label>
+                    <label class="radio inline">
+                      <input type="radio" name="sortByRadios" value="likes">
+                      Likes
+                    </label>
+                    <label class="radio inline">
+                      <input type="radio" name="sortByRadios" value="comments">
+                      Comments
+                    </label>
+                </div>
+            </div>
+            <div id="sort-dir-group" class="control-group">
+                <div class="controls">
+                    <label class="section-header">Sort direction</label>
+                    <label class="radio inline">
+                      <input type="radio" name="sortDirRadios" value="asc">
+                      Ascending
+                    </label>
+                    <label class="radio inline">
+                      <input type="radio" name="sortDirRadios" value="desc" checked>
+                      Descending
+                    </label>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <label class="section-header">Video</label>
+                    <label class="checkbox">
+                      <input id="play-mode" type="checkbox" value="">
+                      Auto-advance
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+    </div>
+
+    <div id="player-hidden" class="hide">
+        <iframe id="player" width="640" height="360" src="http://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/iufblmud.js"></script>
+    <script>
+        var tag = document.createElement('script');
+        tag.src = "//www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    </script>
+    <script>
+        (function (d) {
+            var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement('script'); js.id = id; js.async = true;
+            js.src = "//connect.facebook.net/en_US/all.js";
+            ref.parentNode.insertBefore(js, ref);
+        }(document));
+    </script>
+</body>
+</html>
